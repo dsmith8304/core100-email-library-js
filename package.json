@@ -1,0 +1,12 @@
+{
+  "name": "core100-email-library",
+  "version": "1.0.0",
+  "description": "Fetches email descriptions for Caprai from Core100EmailLibrary.json. A lightweight, serverless API that serves CapsimCore Inbox emails from a structured JSON file. This project provides a simple endpoint to fetch email data by its ID.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
