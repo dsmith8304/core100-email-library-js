@@ -82,7 +82,7 @@ module.exports = {
       "Plan D: How can we get to 100% Awareness an any product? 100% Accessiblity?",
       "Plan E: We need a forecast? How do we arrive at one?",
       "Now it is up to you, darling. Set your Price, Promo, Sales Budget, and come up with a Forecast."
-    ]   
+    ]
   },
   "2.6": {
     "email_id": "2.6",
