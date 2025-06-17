@@ -1,13 +1,12 @@
-// First, we need to import our email data.
-// The 'require' function loads the JSON file so we can use it in our code.
-const emails = require('../Core100EmailLibrary.json');
+// Use CommonJS 'require' to load the JSON data.
+// This assumes Core100EmailLibrary.json is in the SAME 'api' folder.
+const emails = require('./Core100EmailLibrary.json');
 
-// This is the main function that will run when someone visits our API endpoint.
-// Vercel automatically provides the 'request' and 'response' objects.
-export default function handler(request, response) {
-
+// Use CommonJS 'module.exports' to define the function Vercel will run.
+// This is the "front door" that Vercel is looking for.
+module.exports = (request, response) => {
+  
   // Get the 'email_id' from the URL query parameters.
-  // For a URL like /api/email?email_id=2.1, this will be "2.1".
   const { email_id } = request.query;
 
   // Look for the requested email_id as a key in our imported 'emails' object.
@@ -21,4 +20,4 @@ export default function handler(request, response) {
     // ...otherwise, send a 404 Not Found status with an error message.
     response.status(404).json({ error: "Email not found", email_id: email_id });
   }
-}
+};
