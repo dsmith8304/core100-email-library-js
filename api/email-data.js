@@ -168,7 +168,7 @@ module.exports = {
       "Of our competitors, Erie has invested the most in plant and equipment.",
       "Of our competitors, Cake had the lowest material cost."
     ]
-  }
+  },
   "2.11": {
     "email_id": "2.11",
     "subject": "Big Money Moves and Bigger Consequences",
