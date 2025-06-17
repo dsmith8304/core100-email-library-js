@@ -1,9 +1,7 @@
-// Use CommonJS 'require' to load the JSON data.
-// This assumes Core100EmailLibrary.json is in the SAME 'api' folder.
-const emails = require('./Core100EmailLibrary.json');
+/// Use CommonJS 'require' to load the data from our new JS data file.
+const emails = require('./email-data.js');
 
 // Use CommonJS 'module.exports' to define the function Vercel will run.
-// This is the "front door" that Vercel is looking for.
 module.exports = (request, response) => {
   
   // Get the 'email_id' from the URL query parameters.
