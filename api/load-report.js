@@ -93,25 +93,31 @@ function extractSegmentCriteria(text) {
 
 
 function extractProductPerformance(text) {
-  const productBlock = text.match(/Product Performance[\s\S]{0,1500}/i);
-  if (!productBlock) return {};
-  const lines = productBlock[0].split('\n').filter(Boolean);
+  const match = text.match(/Product Performance[\s\S]{0,1500}/i);
+  if (!match) return {};
+
+  const lines = match[0].split('\n').map(l => l.trim()).filter(Boolean);
+  if (lines.length < 2) return {};
+
   const products = {};
+
   for (let i = 1; i < lines.length; i++) {
     const row = lines[i].split(/\s+/);
+    if (row.length < 6) continue; // Ensure we have enough columns
+
     const name = row[0];
-    if (!products[name]) {
-      products[name] = {
-        price: parseFloat(row[1]),
-        awareness: parseFloat(row[2]),
-        accessibility: parseFloat(row[3]),
-        forecast: parseInt(row[4]),
-        actual: parseInt(row[5])
-      };
-    }
+    products[name] = {
+      price: parseFloat(row[1]) || null,
+      awareness: parseFloat(row[2]) || null,
+      accessibility: parseFloat(row[3]) || null,
+      forecast: parseInt(row[4]) || null,
+      actual: parseInt(row[5]) || null
+    };
   }
+
   return products;
 }
+
 
 function extractMarketing(text) {
   const market = {};
