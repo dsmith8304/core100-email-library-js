@@ -82,7 +82,7 @@ module.exports = {
       "Plan D: How can we get to 100% Awareness an any product? 100% Accessiblity?",
       "Plan E: We need a forecast? How do we arrive at one?",
       "Now it is up to you, darling. Set your Price, Promo, Sales Budget, and come up with a Forecast."
-    ]   
+    ]
   },
   "2.6": {
     "email_id": "2.6",
@@ -96,7 +96,7 @@ module.exports = {
     "response_options": [
       "You worked with Shirley to come up with a sales forecast. That's good—she's decent. Knows how to sell a product. But let's be clear: she doesn't catch hell when we stock out. I do. And now, you do. Forecasts are starting points, not finish lines. We need a buffer—something to protect us when Shirley's magic doesn't materialize exactly the way she hopes. Let's discuss how to approach this properly—through Caprai.",
       "Wouldn't it be great if we could predict how things will turn out if Shirley's forecast is right? Or wrong? Well, we can. Let me show you how to forecast a best case and worst case. Now we ask two questions—simple, but critical: What if sales are worse than expected? What if they're better? In other words: What happens if Shirley oversold it? Or if you actually created more demand than you planned for? These aren't hypotheticals. They're scenarios you need to be ready for. Ask me how to find out the consequences.",
-      "Good news: This is only a practice round. No lost revenue. No boardroom blowback. Just lessons—if you're smart enough to learn them. So here's how we wrap it up. Go to the Marketing display. Forecast your worst fears for sales. What if demand crashes? Go to the Production display. Build to your fondest hopes. What if everything works better than expected. Go to the Finance display. Examine the results. You just forecast a ton of inventory. How much cash is left?. You'll start to see the shape of risk—your risk. "
+      "Good news: This is only a practice round. No lost revenue. No boardroom blowback. Just lessons—if you're smart enough to learn them. So here's how we wrap it up. Go to the Marketing display. Forecast your worst fears for sales. What if demand crashes? Go to the Production display. Build to your fondest hopes. What if everything works better than expected. Go to the Finance display. Examine the results. You just forecast a ton of inventory. How much cash is left?. You'll start to see the shape of risk—your risk. "
     ]
   },
   "2.7": {
