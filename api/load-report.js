@@ -130,14 +130,6 @@ function extractSegmentCriteria(text) {
 }
 
 
-  if (lowTechMatch) segments["Low Tech"] = parseBlock(lowTechMatch[1]);
-  if (highTechMatch) segments["High Tech"] = parseBlock(highTechMatch[1]);
-
-  return segments;
-}
-
-
-
 function extractProductPerformance(text) {
   const match = text.match(/Product Performance[\s\S]{0,1500}/i);
   if (!match) return {};
