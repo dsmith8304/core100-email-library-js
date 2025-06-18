@@ -81,28 +81,54 @@ function extractHighLevel(text) {
 
 
 function extractSegmentCriteria(text) {
-  const segments = {};
+  const result = {};
 
-  const lowTechMatch = text.match(/1\.3 Low Tech[\s\S]{0,500}?ExpectationsImportance\s*(.*?)\n(?=\d|\s*1\.4)/i);
-  const highTechMatch = text.match(/1\.4 High Tech[\s\S]{0,500}?ExpectationsImportance\s*(.*?)\n(?=\d|\s*1\.5)/i);
+  const extractBlock = (label, pattern) => {
+    const match = text.match(pattern);
+    if (!match) return;
 
-  const parseBlock = block => {
-    const lines = block.split('\n').map(l => l.trim()).filter(Boolean);
+    const block = match[1].trim().split('\n').map(l => l.trim()).filter(Boolean);
+    if (block.length < 4) return;
+
     const criteria = {};
+    const importance = {};
 
-    lines.forEach(line => {
-      if (line.includes("Price")) criteria.price = line.match(/\$\d{2}\.\d{2} - \$\d{2}\.\d{2}/)?.[0] || null;
-      if (line.includes("Age")) criteria.age = line.match(/\d+(\.\d+)? Years?/)?.[0] || null;
-      if (line.includes("Reliability")) criteria.reliability = line.match(/\d{1,3},\d{3} - \d{1,3},\d{3} Hours/)?.[0] || null;
-      if (line.includes("Positioning")) {
-        const perf = line.match(/Performance (\d+(\.\d+)?)/)?.[1];
-        const size = line.match(/Size (\d+(\.\d+)?)/)?.[1];
-        criteria.positioning = perf && size ? `Performance ${perf} Size ${size}` : null;
+    block.forEach(line => {
+      if (line.includes('Price')) {
+        const price = line.match(/\$[\d,.]+ - \$[\d,.]+/);
+        const imp = line.match(/(\d+)%/);
+        if (price) criteria.Price = price[0];
+        if (imp) importance.Price = imp[1] + '%';
+      } else if (line.includes('Age')) {
+        const age = line.match(/(\d+)\s*Years?/);
+        const imp = line.match(/(\d+)%/);
+        if (age) criteria.Age = age[1] + ' Years';
+        if (imp) importance.Age = imp[1] + '%';
+      } else if (line.includes('Reliability')) {
+        const rel = line.match(/(\d{2,3},?\d{3})\s*-\s*(\d{2,3},?\d{3})/);
+        const imp = line.match(/(\d+)%/);
+        if (rel) criteria.Reliability = `${rel[1]} - ${rel[2]} Hours`;
+        if (imp) importance.Reliability = imp[1] + '%';
+      } else if (line.includes('Positioning')) {
+        const pos = line.match(/Performance\s+([\d.]+)\s+Size\s+([\d.]+)/i);
+        const imp = line.match(/(\d+)%/);
+        if (pos) criteria.Positioning = `Performance ${pos[1]} Size ${pos[2]}`;
+        if (imp) importance.Positioning = imp[1] + '%';
       }
     });
 
-    return criteria;
+    result[label] = {
+      ...criteria,
+      Importance: importance
+    };
   };
+
+  extractBlock("Low Tech", /1\.3 Low Tech\s+Customer Buying CriteriaExpectationsImportance\s+([\s\S]+?)\n1\.4 High Tech/i);
+  extractBlock("High Tech", /1\.4 High Tech\s+Customer Buying CriteriaExpectationsImportance\s+([\s\S]+?)\n1\.5 Perceptual Map/i);
+
+  return result;
+}
+
 
   if (lowTechMatch) segments["Low Tech"] = parseBlock(lowTechMatch[1]);
   if (highTechMatch) segments["High Tech"] = parseBlock(highTechMatch[1]);
