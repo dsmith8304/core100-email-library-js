@@ -37,28 +37,26 @@ module.exports = async (req, res) => {
 // === Extraction Modules ===
 
 function extractHighLevel(text) {
-  const match = text.match(/0\.2 High Level Overview\s+Andrews.*?\n(.*)/i);
+  const match = text.match(/0\.2 High Level Overview\s+Andrews.*?\n([\s\S]*?)(?=Section 1|1\.3 Low Tech)/i);
   if (!match) return {};
 
-  const dataLines = match[1].split('\n').map(line => line.trim()).filter(Boolean);
-  if (dataLines.length < 5) return {};
+  const lines = match[1].split('\n').map(line => line.trim()).filter(Boolean);
 
-  const [salesLine, profitLine, cmLine, stockLine, loanLine] = dataLines;
+  const getDollars = line => (line.match(/\$[\d,()]+/g) || []).map(d =>
+    parseInt(d.replace(/[\$,()]/g, '')) * (d.includes('(') ? -1 : 1)
+  );
 
-  const parseDollars = line =>
-    (line.match(/\$[\d,]+/g) || []).map(d => parseInt(d.replace(/[$,]/g, '')));
-
-  const parsePercents = line =>
-    (line.match(/\d+(\.\d+)?%/g) || []).map(p => parseFloat(p.replace('%', '')));
+  const getPercents = line => (line.match(/\d+(\.\d+)?%/g) || []).map(p => parseFloat(p));
 
   return {
-    sales: parseDollars(salesLine),
-    profit: parseDollars(profitLine),
-    contribution_margin: parsePercents(cmLine),
-    stock_price: parseDollars(stockLine),
-    emergency_loan: parseDollars(loanLine),
+    sales: getDollars(lines[0] || ''),
+    profit: getDollars(lines[1] || ''),
+    contribution_margin: getPercents(lines[2] || ''),
+    stock_price: getDollars(lines[3] || ''),
+    emergency_loan: getDollars(lines[4] || '')
   };
 }
+
 
 
 function extractSegmentCriteria(text) {
