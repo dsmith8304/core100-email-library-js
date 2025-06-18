@@ -66,21 +66,31 @@ function extractHighLevel(text) {
 function extractSegmentCriteria(text) {
   const segments = ["Low Tech", "High Tech"];
   const result = {};
+
   segments.forEach(seg => {
-    const regex = new RegExp(`${seg}.*?Customer Buying Criteria[\\s\\S]{0,500}`, 'g');
+    const regex = new RegExp(`${seg}[\\s\\S]{0,400}`, 'g');
     const match = text.match(regex);
     if (match) {
-      const lines = match[0].split('\n').filter(Boolean);
+      const lines = match[0].split('\n').map(l => l.trim()).filter(Boolean);
+      const priceLine = lines.find(l => l.toLowerCase().includes("price"));
+      const ageLine = lines.find(l => l.toLowerCase().includes("age"));
+      const reliabilityLine = lines.find(l => l.toLowerCase().includes("reliab"));
+      const positionLine = lines.find(l => l.toLowerCase().includes("position"));
+
       result[seg] = {
-        price: lines.find(l => l.includes("Price")),
-        age: lines.find(l => l.includes("Age")),
-        reliability: lines.find(l => l.includes("Reliab")),
-        positioning: lines.find(l => l.includes("Position"))
+        price: priceLine || null,
+        age: ageLine || null,
+        reliability: reliabilityLine || null,
+        positioning: positionLine || null
       };
+    } else {
+      result[seg] = null;
     }
   });
+
   return result;
 }
+
 
 function extractProductPerformance(text) {
   const productBlock = text.match(/Product Performance[\s\S]{0,1500}/i);
