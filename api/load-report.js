@@ -37,59 +37,60 @@ module.exports = async (req, res) => {
 // === Extraction Modules ===
 
 function extractHighLevel(text) {
-  const lines = text.split('\n').map(line => line.trim());
+  const match = text.match(/0\.2 High Level Overview\s+Andrews.*?\n(.*)/i);
+  if (!match) return {};
 
-  const salesLine = lines.find(l => l.startsWith("Sales$"));
-  const profitLine = lines.find(l => l.startsWith("Profit$"));
-  const marginLine = lines.find(l => l.includes("Contribution Margin"));
+  const dataLines = match[1].split('\n').map(line => line.trim()).filter(Boolean);
+  if (dataLines.length < 5) return {};
 
-  if (!salesLine || !profitLine || !marginLine) return {};
+  const [salesLine, profitLine, cmLine, stockLine, loanLine] = dataLines;
 
-  const sales = salesLine.match(/\$[\d,]+/g)?.map(v => parseInt(v.replace(/[$,]/g, '')));
-  const profit = profitLine.match(/\$[\d,]+/g)?.map(v => parseInt(v.replace(/[$,]/g, '')));
-  const margin = marginLine.match(/\d+\.\d+%/g);
+  const parseDollars = line =>
+    (line.match(/\$[\d,]+/g) || []).map(d => parseInt(d.replace(/[$,]/g, '')));
 
-  const companies = ["Andrews", "Baldwin", "Chester", "Digby", "Erie", "Ferris"];
-  const result = {};
+  const parsePercents = line =>
+    (line.match(/\d+(\.\d+)?%/g) || []).map(p => parseFloat(p.replace('%', '')));
 
-  companies.forEach((name, i) => {
-    result[name] = {
-      sales: sales?.[i] || null,
-      profit: profit?.[i] || null,
-      margin: margin?.[i] || null
-    };
-  });
-
-  return result;
+  return {
+    sales: parseDollars(salesLine),
+    profit: parseDollars(profitLine),
+    contribution_margin: parsePercents(cmLine),
+    stock_price: parseDollars(stockLine),
+    emergency_loan: parseDollars(loanLine),
+  };
 }
+
 
 function extractSegmentCriteria(text) {
-  const segments = ["Low Tech", "High Tech"];
-  const result = {};
+  const segments = {};
 
-  segments.forEach(seg => {
-    const regex = new RegExp(`${seg}[\\s\\S]{0,400}`, 'g');
-    const match = text.match(regex);
-    if (match) {
-      const lines = match[0].split('\n').map(l => l.trim()).filter(Boolean);
-      const priceLine = lines.find(l => l.toLowerCase().includes("price"));
-      const ageLine = lines.find(l => l.toLowerCase().includes("age"));
-      const reliabilityLine = lines.find(l => l.toLowerCase().includes("reliab"));
-      const positionLine = lines.find(l => l.toLowerCase().includes("position"));
+  const lowTechMatch = text.match(/1\.3 Low Tech[\s\S]{0,500}?ExpectationsImportance\s*(.*?)\n(?=\d|\s*1\.4)/i);
+  const highTechMatch = text.match(/1\.4 High Tech[\s\S]{0,500}?ExpectationsImportance\s*(.*?)\n(?=\d|\s*1\.5)/i);
 
-      result[seg] = {
-        price: priceLine || null,
-        age: ageLine || null,
-        reliability: reliabilityLine || null,
-        positioning: positionLine || null
-      };
-    } else {
-      result[seg] = null;
-    }
-  });
+  const parseBlock = block => {
+    const lines = block.split('\n').map(l => l.trim()).filter(Boolean);
+    const criteria = {};
 
-  return result;
+    lines.forEach(line => {
+      if (line.includes("Price")) criteria.price = line.match(/\$\d{2}\.\d{2} - \$\d{2}\.\d{2}/)?.[0] || null;
+      if (line.includes("Age")) criteria.age = line.match(/\d+(\.\d+)? Years?/)?.[0] || null;
+      if (line.includes("Reliability")) criteria.reliability = line.match(/\d{1,3},\d{3} - \d{1,3},\d{3} Hours/)?.[0] || null;
+      if (line.includes("Positioning")) {
+        const perf = line.match(/Performance (\d+(\.\d+)?)/)?.[1];
+        const size = line.match(/Size (\d+(\.\d+)?)/)?.[1];
+        criteria.positioning = perf && size ? `Performance ${perf} Size ${size}` : null;
+      }
+    });
+
+    return criteria;
+  };
+
+  if (lowTechMatch) segments["Low Tech"] = parseBlock(lowTechMatch[1]);
+  if (highTechMatch) segments["High Tech"] = parseBlock(highTechMatch[1]);
+
+  return segments;
 }
+
 
 
 function extractProductPerformance(text) {
