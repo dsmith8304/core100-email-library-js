@@ -37,15 +37,21 @@ module.exports = async (req, res) => {
 // === Extraction Modules ===
 
 function extractHighLevel(text) {
-  const block = text.match(/Sales\$.*?Emergency Loan.*?\n/);
-  if (!block) return {};
-  const lines = block[0].split('\n').map(l => l.trim());
-  const sales = lines[0]?.match(/\$[\d,]+/g)?.map(v => parseInt(v.replace(/[$,]/g, '')));
-  const profit = lines[1]?.match(/\$[\d,]+/g)?.map(v => parseInt(v.replace(/[$,]/g, '')));
-  const margin = lines[2]?.match(/\d+\.\d+%/g);
-  const companies = ["Andrews", "Baldwin", "Chester", "Digby", "Erie", "Ferris"];
+  const lines = text.split('\n').map(line => line.trim());
 
+  const salesLine = lines.find(l => l.startsWith("Sales$"));
+  const profitLine = lines.find(l => l.startsWith("Profit$"));
+  const marginLine = lines.find(l => l.includes("Contribution Margin"));
+
+  if (!salesLine || !profitLine || !marginLine) return {};
+
+  const sales = salesLine.match(/\$[\d,]+/g)?.map(v => parseInt(v.replace(/[$,]/g, '')));
+  const profit = profitLine.match(/\$[\d,]+/g)?.map(v => parseInt(v.replace(/[$,]/g, '')));
+  const margin = marginLine.match(/\d+\.\d+%/g);
+
+  const companies = ["Andrews", "Baldwin", "Chester", "Digby", "Erie", "Ferris"];
   const result = {};
+
   companies.forEach((name, i) => {
     result[name] = {
       sales: sales?.[i] || null,
@@ -53,6 +59,7 @@ function extractHighLevel(text) {
       margin: margin?.[i] || null
     };
   });
+
   return result;
 }
 
