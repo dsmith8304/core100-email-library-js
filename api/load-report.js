@@ -154,16 +154,24 @@ function extractProduction(text) {
 
 function extractFinance(text) {
   const result = {};
-  const loanMatch = text.match(/Emergency Loan.*?\n.*?\n/);
-  if (loanMatch) {
-    const line = loanMatch[1];
-    const parts = line.match(/\$[\d,]+/g);
-    const companies = ["Andrews", "Baldwin", "Chester", "Digby", "Erie", "Ferris"];
-    companies.forEach((c, i) => {
-      result[c] = {
-        emergency_loan: parseInt(parts?.[i]?.replace(/[$,]/g, '') || '0')
-      };
-    });
-  }
+  const match = text.match(/Emergency Loan[\s\S]{0,200}/i);
+  if (!match) return result;
+
+  const lines = match[0].split('\n').map(l => l.trim()).filter(Boolean);
+  if (lines.length < 2) return result;
+
+  const dataLine = lines[1];
+  if (!dataLine) return result;
+
+  const values = dataLine.match(/\$[\d,]+/g);
+  const companies = ["Andrews", "Baldwin", "Chester", "Digby", "Erie", "Ferris"];
+
+  companies.forEach((company, i) => {
+    result[company] = {
+      emergency_loan: parseInt(values?.[i]?.replace(/[$,]/g, '') || '0')
+    };
+  });
+
   return result;
 }
+
