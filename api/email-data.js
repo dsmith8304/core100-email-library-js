@@ -1,4 +1,17 @@
 module.exports = {
+   "1.1": {
+    "email_id": "1.1",
+    "subject": "Let's get everything set up",
+    "introduction": "Blimey, yer in charge now, are yeh? Well then—it’s time we sorted through this lot. Not all business is fancy charts and numbers, yeh know. Some of it’s just good sense... and a bit o’ grit.",
+    "report_url": "https://core100-email-api.vercel.app/reports/Round0.pdf",
+    "character": "Hagrid",
+    "email_summary": "Hagrid from the Harry Potter series shares guidance on how to use CapsimInbox and CapsimCore effectively.",
+    "skills": "Strategy",
+    "response_type": "multiple choice",
+    "response_options": [
+      "Continue"
+    ]
+  },
   "2.1": {
     "email_id": "2.1",
     "subject": "Let's get everything set up",
