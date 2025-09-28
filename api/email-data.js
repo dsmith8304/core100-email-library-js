@@ -12,93 +12,100 @@ module.exports = {
       "Continue"
     ]
   },
-  "2.1": {
-    "email_id": "2.1",
-    "subject": "Let's get everything set up",
-    "introduction": "Welcome to Practice Round 1! I am ready to go.",
-    "report_url": "https://core100-email-api.vercel.app/reports/Round0.pdf",
-    "character": "Caprai",
-    "email_summary": "Caprai welcomes the CEO to their new job at Andrews Corporation.",
-    "skills": "Strategy",
-    "response_type": "multiple choice",
-    "response_options": [
-      "Continue"
-    ]
-  },
-  "2.2": {
-    "email_id": "2.2",
-    "subject": "Breaking a market into market segments",
-    "introduction": "Design is not just shape. It is strategy, non? A whisper of intention beneath the curve. Performance, Size, Age, Reliability—these are the notes in our composition. But every audience listens differently. Low Tech hums to one rhythm, High Tech to another. Shall we begin, mon capitaine? The map awaits—drawn in desires, not lines.",
-    "report_url": "https://core100-email-api.vercel.app/reports/Round0.pdf",
-    "character": "Raymond Loewy",
-    "email_summary": "Introduces how different customer segments (Low Tech vs. High Tech) interpret performance, size, age, and reliability, using the Perceptual Map as a design tool.",
-    "skills": "R&D",
-    "response_type": "multi_select",
-    "response_options": [
-      "High Tech is a race toward elegance: more power, less bulk—always pushing the envelope, but never past the customer's reach.",
-      "In Low Tech, success lies in restraint: no frills, no flash—just function wrapped in friendly form.",
-      "High Tech craves youth—fresh, fast, irresistible. But in Low Tech, mon ami, a touch of age is not a flaw—it’s charm, it’s trust, it’s style that lingers",
-      "In High Tech, poor reliability ruins the illusion—poof! In Low Tech, it ruins the relationship—et voilà, trust is gone.",
-      "Rough cuts? Bah! Mere formality. A product cannot fail—style always finds a way.",
-      "Design something new, and the world will beat a path to your door. Strategy? Très overrated."
-    ]
-  },
-  "2.3": {
-    "email_id": "2.3",
-    "subject": "The R&D display Is a design Studio, a place to make dreams come true",
-    "introduction": "The R&D display is our atelier, our studio, our stage. Let others copy the past. You? You design the future. So come—let us recast Able not as a compromise, but as a statement.",
-    "report_url": "https://core100-email-api.vercel.app/reports/Round0.pdf",
-    "character": "Raymond Loewy",
-    "email_summary": "Challenges the student to think of product revisions and launches as strategic design moves and to consider different R&D paths for the Able product.",
-    "skills": "R&D",
-    "response_type": "multi_select",
-    "response_options": [
-      "Let us charm the Low Tech market through disciplined elegance. These customers crave the perfect marriage of economy and maturity—a refined design that has found its purposeful place. Begin with Able's strategic blueprint: Performance 6.5, Size 13.6, Reliability 17,000. We can explore variations through our innovation compass, Caprai, to perfect this mature swan with an economical foundation.",
-      "Let us leap our froggish competitors. Able jumps to Performance 9.0, Size 11.0, Reliability 23,000. Let's discuss this bold plan via Caprai. This strategic catalyst will transform our position, allowing us to surge ahead while others remain mired in timidity. Rather than a setback, this advancement positions Able as our breakthrough vessel in the marketplace.",
-      "Let us create a new vessel of transformation for our discerning customers. I propose specifications that will leapfrog the competition while maintaining elegant efficiency: Performance 9.8, Size 10.2, Reliability 23,000. This strategic blueprint requires your artistic touch—what name shall we bestow upon this masterpiece? Share your vision via Caprai, where we shall craft the future together. This is not merely a product, but our compass pointing toward market leadership.",
-      "Shall we discuss a few issues? What matters most about Able to our Low Tech customers? How can we give this to them? How often should we revise Able? How can we control Able's unit cost? And if we transform Able to High Tech? Same questions, of course.",
-      "What about a new product? When do we build its production line? How often do we revise it? Should we keep it High Tech forever, maybe let it slip into Traditional as we replace it with a still newer product? There must be trade-offs. What are they?",
-      "Normally this would be the time to establish our design philosophy. Will your strategic blueprint favor methodical evolution or calculated disruption? However, we shall practice tactics today. Make the revision of your choice to Able, and launch a new product to arrive next round. Remember to click File and Save All Decisions. I shall see you again in the debrief. Bon chance!"
-    ]
-  },
-  "2.4": {
-    "email_id": "2.4",
-    "subject": "Marketing Never Goes Out of Style",
-    "introduction": "Sweetheart, let’s get something straight: good marketing isn’t lipstick on a pig—it’s the party, the perfume, and the promise.",
-    "report_url": "https://core100-email-api.vercel.app/reports/Round0.pdf",
-    "character": "Shirley Polykoff",
-    "email_summary": "Emphasizes the power of the 4Ps in transforming product perception and performance, focusing on how Able can be better positioned in the market.",
-    "skills": "Marketing",
-    "response_type": "multi_select",
-    "response_options": [
-      "Raymond is right—Able is a “sofa bed.” It’s trying to serve both Low Tech and High Tech, but ends up pleasing neither.",
-      "With the right combination of Price, Promotion, and Place, even a product stuck between segments can become a bestseller.",
-      "In the 4Ps, Price is the only one that directly influences customer behavior—Promotion and Place don’t matter if the price is right.",
-      "Without continued investment, a product’s Promotion (Awareness) decays over time—even if it was high last year.",
-      "Sales Budget increases a product’s Accessibility, making it easier for customers in that segment to find and buy it.",
-      "If a product falls outside the Rough Cut for Price, Positioning, or Reliability, customers won’t consider it—no matter how well you promote it."
-    ]
-  },
-  "2.5": {
-    "email_id": "2.5",
-    "subject": "Lights, Camera, Sliders—Let’s Make Able Shine",
-    "introduction": "Alright, sugar—this is where lipstick meets ledger. You’ve got four sliders, one product, and a whole lot of ambition.",
-    "report_url": "https://core100-email-api.vercel.app/reports/Round0.pdf",
-    "character": "Shirley Polykoff",
-    "email_summary": "Introduces marketing variables—Price, Promotion, Sales Budget, and Forecast—and how they affect product visibility, accessibility, and inventory outcomes.",
-    "skills": "Marketing",
-    "response_type": "multi_select",
-    "response_options": [
-      "Plan A: Let's go full Low Tech with Able. What is our long term plan? What are the trade-offs? What stands in our way?",
-      "Plan B: Let's go full High Tech with Able. What is our long term plan? What are the trade-offs? What stands in our way?",
-      "Plan C: We like sofabeds. Let's stay Low Tech and High Tech with Able. What is our long term plan? What are the trade-offs? What stands in our way?",
-      "Plan D: How can we get to 100% Awareness an any product? 100% Accessiblity?",
-      "Plan E: We need a forecast? How do we arrive at one?",
-      "Now it is up to you, darling. Set your Price, Promo, Sales Budget, and come up with a Forecast."
-    ]
-  },
-  "2.6": {
-    "email_id": "2.6",
+   "2.1": {
+     "email_id": "2.1",
+     "subject": "Creating solutions to enchant the customer",
+     "introduction": "Design begins not with the object, but with the customer who desires it. Shall we explore our customers together, mon cher(e)?",
+     "report_url": "https://core100-email-api.vercel.app/reports/Round0.pdf",
+     "character": "Raymond Loewy",
+     "email_summary": "Introduces students to the Perceptual Map, customer segments, and design variables (Performance, Size, Age, Reliability). Frames design as solving customer needs and sets up True/False investigation with Caprai.",
+     "skills": "R&D",
+     "response_type": "multi_select",
+     "response_options": [
+       "High Tech is a race toward elegance: more power, less bulk—always pushing the envelope, but never past the customer's reach.",
+       "In Low Tech, success lies in restraint: no frills, no flash—just function wrapped in friendly form.",
+       "High Tech craves youth—fresh, fast, irresistible. But in Low Tech, mon ami, a touch of age is not a flaw—it’s charm, it’s trust, it’s style that lingers.",
+       "In High Tech, poor reliability ruins the illusion—poof! In Low Tech, it ruins the relationship—et voilà, trust is gone.",
+       "Rough cuts? Bah! Mere formality. A product cannot fail—style always finds a way.",
+       "Design something new, and the world will beat a path to your door. Strategy? Très overrated."
+     ]
+   },
+   "2.2": {
+     "email_id": "2.2",
+     "subject": "The R&D display is a design studio, a place to make dreams come true",
+     "introduction": "Shall we consider options for Able, mon capitaine?",
+     "report_url": "https://core100-email-api.vercel.app/reports/Round0.pdf",
+     "character": "Raymond Loewy",
+     "email_summary": "Challenges the CEO to consider Able’s future through three R&D strategies: refining for Low Tech, straddling both markets, or reforging for High Tech. Reinforces R&D rules with engaging True/False statements.",
+     "skills": "R&D",
+     "response_type": "multi_select",
+     "response_options": [
+       "Refine for Low Tech! Our tactic: Performance 6.4, Size 13.7, Reliability 17,000. True/False: Low Tech will love us, but those fashion hungry High Tech customers will despise us.",
+       "Straddle Both Segments! Our tactic: Performance 6.4, Size 13.7, Reliability 17,000. True/False: We are like a sofa-bed. Not a good sofa. Not a good bed. But there is a market for sofa-beds, non?",
+       "Reforge for High Tech! Our tactic: Performance 8.5, Size 11.5, Reliability 22,000. True/False: It is a long journey, 20 months to complete. But we play leapfrog with our tortoise competitors.",
+       "True/False: In all scenarios, any leftover inventory will be reworked to the new specifications at no cost to us—as if Santa’s elves slip into the warehouse at midnight to perform their quiet magic.",
+       "True/False: The moment Able emerges from R&D, its Age is cut in half—like a little botox smoothing away the wrinkles, non?",
+       "True/False: On the day of revision, we must shut down the production line for a time to implement the changes. Production frozen, profits paused… or is that merely a myth, non?"
+     ]
+   },
+   "2.3": {
+     "email_id": "2.3",
+     "subject": "New products emerge from our dreams and desires",
+     "introduction": "Revision reshapes, but invention defines. Shall we place our new design at today’s cutting edge, or tomorrow’s frontier?",
+     "report_url": "https://core100-email-api.vercel.app/reports/Round0.pdf",
+     "character": "Raymond Loewy",
+     "email_summary": "Invites the CEO to consider inventing a new High Tech product using two strategies: Cutting Edge (aligned with the current ideal) or Future Edge (positioned ahead of the segment). Reinforces trade-offs, costs, and myths about R&D.",
+     "skills": "R&D",
+     "response_type": "multi_select",
+     "response_options": [
+       "Cutting Edge! Our tactic: Performance 8.5, Size 11.5, Reliability 22,000. True/False: This project will complete within the current year, allowing us to launch in Round 2 with a product that matches High Tech’s current ideal.",
+       "Future Edge! Our tactic: Performance 10.0, Size 10.0, Reliability 22,000. True/False: Magnifique! We finish the project in December of Round 2, stretching the R&D cycle to its limit.",
+       "True/False: We can use excess capacity on Able to make our beautiful new product.",
+       "True/False: High Tech customers demand excellence! We must crank our Reliability to the maximum.",
+       "True/False: Quelle chance! Our new product will only cost us the R&D expense!",
+       "True/False: Push performance and size forward, and you are no longer building a family sedan — you are crafting a sports car. Steel becomes alloy, fabric becomes leather, cost rises with every curve."
+     ]
+   },
+   "2.4": {
+     "email_id": "2.4",
+     "subject": "R&D Does Not Live in a Vacuum",
+     "introduction": "R&D is not a toy—it’s a trigger, and every time you pull it, the blast wave hits Production, Marketing, and Finance. Shall we explore those ripples together?",
+     "report_url": "https://core100-email-api.vercel.app/reports/Round0.pdf",
+     "character": "Steve Jobs",
+     "email_summary": "Jobs challenges the CEO to see R&D as a cross-functional driver with ripple effects across Production, Marketing, and Finance. Emphasizes timing, capacity, automation, costs, and trade-offs.",
+     "skills": "R&D",
+     "response_type": "multi_select",
+     "response_options": [
+       "True/False: We have one production line and it makes all of our products. All we have to do is expand capacity as we need it.",
+       "True/False: The higher our automation, the faster we can get new designs from R&D.",
+       "True/False: The moment we announce that a new product is in R&D, it drives up demand for the products we are producing already.",
+       "True/False: It costs almost no R&D expense to increase our Reliability, so it makes sense to lock high reliability into our designs.",
+       "True/False: Good now is better than perfect later. It makes more sense to get a new product out of R&D quick and then reposition it as needed, than it does to wait a long time to get a perfect design.",
+       "True/False: A new product begins to Age the day it makes its first sale, not the day it emerges from R&D."
+     ]
+   },
+   "2.6": {
+     "email_id": "2.6",
+     "subject": "Marketing Never Goes Out of Style",
+     "introduction": "Hi honey, I’m Shirley Polykoff. Able’s trying to be everything to everyone—and failing. Let’s use Price, Promotion, and Place to give her a voice that sells.",
+     "report_url": "https://core100-email-api.vercel.app/reports/Round0.pdf",
+     "character": "Shirley Polykoff",
+     "email_summary": "Polykoff introduces the role of Marketing in rescuing Able from weak positioning. She highlights the 4Ps (Price, Promotion, Place, and implicitly Product) and how they shape perception, awareness, and accessibility.",
+     "skills": "Marketing",
+     "response_type": "multi_select",
+     "response_options": [
+       "Raymond is right—Able is a \"sofa bed.\" It's trying to serve both Low Tech and High Tech, but ends up pleasing neither.",
+       "With the right combination of Price, Promotion, and Place, even a product stuck between segments can become a bestseller.",
+       "In the 4Ps, Price is the only one that directly influences customer behavior—Promotion and Place don't matter if the price is right.",
+       "Without continued investment, a product's Promotion (Awareness) decays over time—even if it was high last year.",
+       "Sales Budget increases a product's Accessibility, making it easier for customers in that segment to find and buy it.",
+       "If a product falls outside the Rough Cut for Price, Positioning, or Reliability, customers won't consider it—no matter how well you promote it."
+     ]
+   },
+
+
+  "2.10": {
+    "email_id": "2.10",
     "subject": "You’re in Charge. Now Let’s See if You Can Deliver.",
     "introduction": "You want to lead? Then lead. Forecasts are easy. Commitments are not.",
     "report_url": "https://core100-email-api.vercel.app/reports/Round0.pdf",
@@ -112,8 +119,8 @@ module.exports = {
       "Good news: This is only a practice round. No lost revenue. No boardroom blowback. Just lessons—if you're smart enough to learn them. So here's how we wrap it up. Go to the Marketing display. Forecast your worst fears for sales. What if demand crashes? Go to the Production display. Build to your fondest hopes. What if everything works better than expected. Go to the Finance display. Examine the results. You just forecast a ton of inventory. How much cash is left?. You'll start to see the shape of risk—your risk. "
     ]
   },
-  "2.7": {
-    "email_id": "2.7",
+  "2.11": {
+    "email_id": "2.11",
     "subject": "Cash is King!",
     "introduction": "Cash flow isn’t theory—it’s survival. No cash, no business.",
     "report_url": "https://core100-email-api.vercel.app/reports/Round0.pdf",
@@ -128,8 +135,8 @@ module.exports = {
       "Step 4. Now that you understand the risks, put your worst case on the Marketing display, and your best case on the Production display. This forces your system to pay for your worst case inventory. If you have any cash left, and your worst case is truly a worst case, you cannot get an emergency loan from an inventory expansion. Ask Caprai to explain why."
     ]
   },
-  "2.8": {
-    "email_id": "2.8",
+  "2.12": {
+    "email_id": "2.12",
     "subject": "Design Leaves Clues—Let Us Interpret Them",
     "introduction": "The curtain has fallen on Practice Round 1. What remains? Not applause, not regrets—evidence.",
     "report_url": "https://core100-email-api.vercel.app/reports/Round0.pdf",
@@ -146,8 +153,8 @@ module.exports = {
       "The products revised later in the year, like Fast and Eat, belong to companies pushing their R&D atelier the hardest—striving to deliver a masterpiece to the market."
     ]
   },
-  "2.9": {
-    "email_id": "2.9",
+  "2.13": {
+    "email_id": "2.13",
     "subject": "Mirror, Mirror—What Did the Market See?",
     "introduction": "Sweetie, it’s time to pull the curtain back and see who really dazzled the crowd. Spoiler alert—it wasn’t always us.",
     "report_url": "https://core100-email-api.vercel.app/reports/Round0.pdf",
@@ -164,8 +171,8 @@ module.exports = {
       "High Tech is growing over twice as fast as Low Tech."
     ]
   },
-  "2.10": {
-    "email_id": "2.10",
+  "2.14": {
+    "email_id": "2.14",
     "subject": "Practice is Over—Let’s Talk Performance",
     "introduction": "You said you had a strategy. The report says you had a result. Let’s see if those things align—or if you just got lucky.",
     "report_url": "https://core100-email-api.vercel.app/reports/Round0.pdf",
@@ -182,8 +189,8 @@ module.exports = {
       "Of our competitors, Cake had the lowest material cost."
     ]
   },
-  "2.11": {
-    "email_id": "2.11",
+  "2.15": {
+    "email_id": "2.15",
     "subject": "Big Money Moves and Bigger Consequences",
     "introduction": "You want to lead a company? Then you better know where the money came from, where it went, and who expects it back—with interest.",
     "report_url": "https://core100-email-api.vercel.app/reports/Round0.pdf",
