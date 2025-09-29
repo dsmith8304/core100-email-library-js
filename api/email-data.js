@@ -94,15 +94,32 @@ module.exports = {
      "skills": "Marketing",
      "response_type": "multi_select",
      "response_options": [
-       "Raymond is right—Able is a \"sofa bed.\" It's trying to serve both Low Tech and High Tech, but ends up pleasing neither.",
-       "With the right combination of Price, Promotion, and Place, even a product stuck between segments can become a bestseller.",
-       "In the 4Ps, Price is the only one that directly influences customer behavior—Promotion and Place don't matter if the price is right.",
-       "Without continued investment, a product's Promotion (Awareness) decays over time—even if it was high last year.",
-       "Sales Budget increases a product's Accessibility, making it easier for customers in that segment to find and buy it.",
-       "If a product falls outside the Rough Cut for Price, Positioning, or Reliability, customers won't consider it—no matter how well you promote it."
+       "True/False: Raymond is right—Able is a \"sofa bed.\" It's trying to serve both Low Tech and High Tech, but ends up pleasing neither.",
+       "True/False: With the right combination of Price, Promotion, and Place, even a product stuck between segments can become a bestseller.",
+       "True/False: In the 4Ps, Price is the only one that directly influences customer behavior—Promotion and Place don't matter if the price is right.",
+       "True/False: Without continued investment, a product's Promotion (Awareness) decays over time—even if it was high last year.",
+       "True/False: Sales Budget increases a product's Accessibility, making it easier for customers in that segment to find and buy it.",
+       "True/False: If a product falls outside the Rough Cut for Price, Positioning, or Reliability, customers won't consider it—no matter how well you promote it."
      ]
    },
-
+   "2.7": {
+     "email_id": "2.7",
+     "subject": "Able's Price Must Be Right",
+     "introduction": "Hi honey, I’m Shirley Polykoff. Price isn’t just a number — it’s a story about value. Shall we see if Able’s price is telling the right story?",
+     "report_url": "https://core100-email-api.vercel.app/reports/Round0.pdf",
+     "character": "Shirley Polykoff",
+     "email_summary": "Polykoff explains Price as both a signal and a competitive tool. She introduces floor (margins, suspicion, demand collapse), ceiling (substitutes), and value (Low Tech = economy, High Tech = cutting edge). She warns against cost-plus pricing and shows how differentiation through positioning, age, reliability, awareness, and accessibility allows a higher price.",
+     "skills": "Marketing",
+     "response_type": "multi_select",
+     "response_options": [
+       "True/False: Customers weigh the value of solving their problem against the total cost of our solution — not just the purchase price.",
+       "True/False: The ceiling price in a segment is set because customers can substitute higher-end sensors if ours costs the same or less.",
+       "True/False: The floor price is set because customers suspect something is defective if a sensor is too cheap.",
+       "True/False: Our costs determine the price. This approach is called cost-plus pricing: take the cost to make Able, add a markup, and that’s what customers should pay.",
+       "True/False: Low Tech customers expect older designs, less technology, and consequently lower prices. High Tech customers expect higher prices consistent with cutting edge technology.",
+       "True/False: If our product is positioned better — near ideal spot, decent Age, stronger Reliability, higher Awareness, and greater Accessibility — we can sustain a higher price than our competitors in both segments."
+     ]
+   },
 
   "2.10": {
     "email_id": "2.10",
