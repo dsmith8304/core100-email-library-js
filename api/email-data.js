@@ -1,17 +1,83 @@
 module.exports = {
    "1.1": {
-    "email_id": "1.1",
-    "subject": "Let's get everything set up",
-    "introduction": "Blimey, yer in charge now, are yeh? Well then—it’s time we sorted through this lot. Not all business is fancy charts and numbers, yeh know. Some of it’s just good sense... and a bit o’ grit.",
-    "report_url": "https://core100-email-api.vercel.app/reports/Round0.pdf",
-    "character": "Hagrid",
-    "email_summary": "Hagrid from the Harry Potter series shares guidance on how to use CapsimInbox and CapsimCore effectively.",
-    "skills": "Strategy",
-    "response_type": "multiple choice",
-    "response_options": [
-      "Continue"
-    ]
-  },
+     "email_id": "1.1",
+     "subject": "Thinking different in R&D",
+     "introduction": "I’m Steve Jobs. I’m the guy behind the Apple II computer and the original iPhone. At Apple, those things came to life in R&D. The same is true for your company: R&D is where you invent new products and update old ones.",
+     "report_url": "https://core100-email-api.vercel.app/reports/Round0.pdf",
+     "character": "Steve Jobs",
+     "email_summary": "Introduces students to the R&D department. Encourages updating the existing product (Able) and creating a new one. Caprai holds the checklist and provides step-by-step guidance in CEO World. This is the first step in the demo round.",
+     "skills": "R&D",
+     "response_type": "multi_select",
+     "response_options": [
+       "Change Able's Performance from 6.4 to any value between 7.0 and 7.4. (10 points)",
+       "Change Able's Size from 13.6 to any value between 12.6 and 13.0 (10 points)",
+       "Change Able's Reliability from 21000 to any value between 22000 and 23000 (10 points)",
+       "Click New Product and pick a name for your new product (10 points)",
+       "Give your new product a Performance between 7.5 and 9.5 (10 points)",
+       "Give your new product a Size between 10.5 and 12.5 (10 points)",
+       "Give your new product a Reliability between 20000 and 22000 (10 points)"
+     ]
+   },
+   "1.2": {
+     "email_id": "1.2",
+     "subject": "Let's make some sales!",
+     "introduction": "Welcome to the Marketing department. This is where we turn attention into sales. I’m Shirl — I made Clairol a household name by asking one simple question: Does she or doesn’t she? Your job in here is just as simple. You’ll set a price, set a promotion budget, and set a sales budget for each product. That’s it.",
+     "report_url": "https://core100-email-api.vercel.app/reports/Round0.pdf",
+     "character": "Shirley Polykoff",
+     "email_summary": "Introduces the Marketing tab. Guides the student to set price, promotion, sales budgets, and forecast for Able. Caprai will assist with a step-by-step checklist during this walkthrough phase.",
+     "skills": "Marketing",
+     "response_type": "multi_select",
+     "response_options": [
+       "Select Able's tab, then change Able's price from $34.00 to $35.00. (10 points)",
+       "Change Able's Promo Budget from $1,000 to something between $1,400 and $1,600. (10 points)",
+       "Change Able's Sales Budget from $1,000 to something between $1,600 and $1,800. (10 points)",
+       "Change Able's Forecast from 1200 to 1300. (10 points)"
+     ]
+   },
+   "1.3": {
+     "email_id": "1.3",
+     "subject": "This is the Production Floor",
+     "introduction": "Welcome to Production. This is where your plans become physical reality. I’m Andy Grove. I ran Intel for decades, and I can tell you — strategy is nothing if you can’t execute. Your job here is to make sure you have enough capacity and automation to produce the units you forecasted in Marketing.",
+     "report_url": "https://core100-email-api.vercel.app/reports/Round0.pdf",
+     "character": "Andrew Grove",
+     "email_summary": "Introduces the Production tab. Students will adjust Able's schedule, purchase capacity for their new product, and set its automation level. Caprai guides them step-by-step during the walkthrough phase.",
+     "skills": "Production",
+     "response_type": "multi_select",
+     "response_options": [
+       "Change Able's Production Schedule from 1300 to 1450. (10 points)",
+       "Select the tab for your new product. Order 250 units of Capacity. (10 points)",
+       "Set the Automation level of your new capacity to 3.1 (10 points)"
+     ]
+   },
+      "1.4": {
+     "email_id": "1.4",
+     "subject": "Finance: The Backbone of Bold Ventures",
+     "introduction": "Welcome to Finance. This is where numbers turn into decisions. I’m Amadeo Giannini — I founded Bank of America to serve the working class when no one else would. You don’t need Wall Street to understand money. You just need to pay attention. Your job here is to check your cash position and decide how to raise money if needed.",
+     "report_url": "https://core100-email-api.vercel.app/reports/Round0.pdf",
+     "character": "Amadeo Giannini",
+     "email_summary": "Introduces students to the Finance tab. Walkthrough includes borrowing short-term, issuing long-term debt, and issuing equity. Caprai assists with step-by-step guidance.",
+     "skills": "Finance",
+     "response_type": "multi_select",
+     "response_options": [
+       "Borrow $1,100 in Current Debt. (10 points)",
+       "Issue (Borrow) $2,200 in Long Term Debt (Bonds). (10 points)",
+       "Issue Common Stock $2,400. (10 points)"
+     ]
+   },
+   "1.5": {
+     "email_id": "1.5",
+     "subject": "This is the Investor World",
+     "introduction": "Welcome to Investor World. This is where you learn to build wealth — slowly, wisely, and with purpose. I’m Jack Bogle. I created the first index fund and built Vanguard on a simple idea: Don’t look for the needle in the haystack. Just buy the haystack.",
+     "report_url": "https://core100-email-api.vercel.app/reports/Round0.pdf",
+     "character": "John C. Bogle",
+     "email_summary": "Introduces students to Investor World. Students will practice buying a diversified mix of stocks and bonds with their starting capital. Caprai walks them through their first trades in a low-pressure, exploratory way.",
+     "skills": "Portfolio",
+     "response_type": "multi_select",
+     "response_options": [
+       "Buy 6 shares of every company's stock. That's 36 shares total. (10 points)",
+       "Every company has a bond named \"11.0S2027\". Buy 1 from each company. That's 6 bonds total. (10 points)"
+     ]
+   },
    "2.1": {
      "email_id": "2.1",
      "subject": "Creating solutions to enchant the customer",
