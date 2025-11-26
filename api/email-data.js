@@ -82,6 +82,27 @@ module.exports = {
       "skills": "Integration",
       "response_type": "none"
    },
+   "1.7": {
+     "email_id": "1.7",
+     "subject": "How did your Portfolio do?",
+     "introduction": "Let’s swing over to Investor World and take a look at how your investments performed. You started with $1,200. Now it’s time to see what happened to your money.",
+     "character": "Caprai",
+     "email_summary": "Directs students to review the results of their Investor World portfolio. Instructs them to explore the History panel and the Investor World Simulation Report. Clarifies the distinction between CEO World and Investor World, and prepares them to move on to CEO performance debrief.",
+     "skills": "Portfolio",
+     "response_type": "none"
+   }, 
+   "1.8": {
+      "email_id": "1.8",
+      "subject": "Let's poke around the CEO World.",
+      "introduction": "In the CEO world we get two reports that present our results.",
+      "character": "Caprai",
+      "email_summary": "Introduces the Debrief Report and the CapsimCore Simulation Report. Guides the student to explore metrics like Sales, Profit, Contribution Margin, and Stock Price without pressure to interpret. Encourages using Caprai to investigate specific results from the reports.",
+      "skills": "Analysis",
+      "response_type": "single_select",
+      "response_options": [
+      "I have finished skimming through the reports and I am ready to continue."
+      ]
+   },
    "2.1": {
      "email_id": "2.1",
      "subject": "Creating solutions to enchant the customer",
