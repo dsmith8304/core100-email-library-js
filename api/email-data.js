@@ -73,6 +73,15 @@ module.exports = {
        "Every company has a bond named \"11.0S2027\". Buy 1 from each company. That's 6 bonds total. (10 points)"
      ]
    },
+   "1.6": {
+      "email_id": "1.6",
+      "subject": "Let's step into a time machine.",
+      "introduction": "You toured the company, met your advisors, made decisions in R&D, Marketing, Production, and Finance — and even tested the waters in Investor World. Not bad for a rookie CEO. You didn’t have to know what you were doing — not yet. This was monkey-see, monkey-do. The real learning starts when we slow things down and unpack your moves. That begins in Lesson 2.",
+      "character": "Caprai",
+      "email_summary": "Wraps up the Walking Tour. Introduces the Simulation Clock. Students are instructed to process their round and are informed about the Undo feature — which will disappear in Lesson 4. Caprai previews the practice structure ahead and prepares students for debrief.",
+      "skills": "Integration",
+      "response_type": "none"
+   },
    "2.1": {
      "email_id": "2.1",
      "subject": "Creating solutions to enchant the customer",
