@@ -120,6 +120,70 @@ module.exports = {
        "Design something new, and the world will beat a path to your door. Strategy? Très overrated."
      ]
    },
+   "1.9": {
+     "email_id": "1.9",
+     "subject": "My darkest hour.",
+     "introduction": "My name was Og Mandino. Let me tell you what I learned in life.",
+     "character": "Og Mandino",
+     "email_summary": "Og Mandino recounts his journey from addiction and homelessness to recovery, modest financial stability, and eventual success. He emphasizes the internal work required to build a solid foundation before external wealth can be sustainable. He presents a list of financial myths that keep people stuck and invites students to question and discuss them with Caprai.",
+     "skills": "Personal Finance",
+     "response_type": "multi_select",
+     "response_options": [
+       "I’ll never get out of debt unless I make more money.",
+       "Credit cards are just part of life — everyone uses them to survive.",
+       "My student loans are too big to even think about.",
+       "Banks are happy to loan me just enough money to keep me broke.",
+       "Nobody builds wealth without a high-paying job or lucky break.",
+       "If I try to save now, it won’t matter — the amounts are too small.",
+       "I’m just bad with money — always have been.",
+       "AI can’t help me — it’s for tech people, not me.",
+       "People like me don’t invest — that’s for the rich.",
+       "A high credit score will solve my money problems.",
+       "Money problems are the disease, not the symptom."
+     ]
+   },
+   "1.10": {
+     "email_id": "1.10",
+     "subject": "If you don’t know where you’re standing, you won’t know where to go.",
+     "introduction": "Hi, I’m Sam Walton. I built Walmart — but before any of that, I was broke, in debt, and nearly bankrupt.",
+     "character": "Sam Walton",
+     "email_summary": "Sam Walton uses a cave-and-river metaphor to describe the importance of self-awareness in personal finance and career. He introduces five core tools for gaining clarity: a balance sheet, income/expense tracking, time use, a skills audit, and relationship evaluation. He encourages students to confront their reality and explore concrete tools and questions to shine light on their personal and financial situations.",
+     "skills": "Self-Awareness, Personal Finance, Productivity",
+     "response_type": "multi_select",
+     "response_options": [
+       "Can I connect my bank and credit cards to a simple accounting system?",
+       "Is there a way to see everything I spend in one place?",
+       "What tools can help me track how I spend my time?",
+       "Can you help me do a personal skills audit?",
+       "How do I identify the people who support me versus the ones who drain me?",
+       "Is there a simple way to see if I'm making progress each month?",
+       "How do I set financial goals if I feel like I’m behind?",
+       "Can AI actually help me with my money and career?",
+       "How do I stay motivated when things feel slow or small?",
+       "Should I set a price on my time?"
+     ]
+   },
+   "1.11": {
+     "email_id": "1.11",
+     "subject": "Can you tell the difference between good debt and bad debt?",
+     "introduction": "Hey Sugar, my name is Madam C.J. Walker. I went from laundress to America’s first self-made female millionaire. Let’s talk about debt — and how the right kind can change your life.",
+     "character": "Madam C.J. Walker",
+     "email_summary": "Madam C.J. Walker reframes the conversation about debt. Not all debt is bad — some is a tool that builds wealth. She shares her personal story of taking out a loan to launch her haircare business. The email invites students to distinguish between harmful and helpful debt, and encourages reflection using practical examples and guidance from Caprai.",
+     "skills": "Debt Management, Financial Decision-Making, Entrepreneurial Thinking",
+     "response_type": "checklist",
+     "response_options": [
+       "Using a credit card to buy fast food when your fridge is full.",
+       "Taking a small loan to buy tools that let you do side jobs (e.g., landscaping, repairs, hair styling).",
+       "Buying a new car with a $500/mo loan when a $200/month used car would do.",
+       "Enrolling in a 12-week course that could increase your pay by $4/hr.",
+       "Putting a concert ticket on your credit card.",
+       "Borrowing money to buy inventory for your online shop — and you already have customers waiting.",
+       "Taking a personal loan to cover last month’s bills, with no plan to increase income.",
+       "Getting a credit card with a 0% APR intro offer to consolidate higher-interest cards (and a plan to pay it off before the promo ends).",
+       "Taking out student loans for a degree without knowing the typical pay in that field.",
+       "Buying a used laptop to start freelance work — graphic design, writing, bookkeeping."
+     ]
+   },
    "2.2": {
      "email_id": "2.2",
      "subject": "The R&D display is a design studio, a place to make dreams come true",
